@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_DATABASE_PASSWORD'] %>
+  host: <%= ENV.fetch('PG_HOST') { 'localhost' } %>
+  port: <%= ENV.fetch('PG_PORT') { 5432 } %>
+  pool: 5
+
+development:
+  <<: *default
+  database: notification_app_development
+
+test:
+  <<: *default
+  database: notification_app_test
+
+production:
+  <<: *default
+  database: notification_app
+
+staging:
+  <<: *default
+  database: notification_app
