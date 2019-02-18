@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 
-// shitcodding
-$(document).ready(function() {
-  $("#notif-button").click();
+$(document).ready(function(){
+  requestPermission()
 });
