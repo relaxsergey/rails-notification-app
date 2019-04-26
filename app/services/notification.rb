@@ -5,7 +5,7 @@ module Notification
     firebase_key = ENV['FCM_KEY']
     firebaseApi = "curl -X POST --header 'Authorization: key=#{firebase_key}' --Header 'Content-Type: application/json' https://fcm.googleapis.com/fcm/send -d "
     alert_title = 'test test'
-    alert_description = 'pidar pidar'
+    alert_description = 'test test'
 
     #Notification params for Mobile
     # notificationParams = {
